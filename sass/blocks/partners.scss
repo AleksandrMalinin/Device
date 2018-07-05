@@ -1,0 +1,23 @@
+.partners {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 94px;
+}
+
+.partners__item {
+  margin-bottom: 89px;
+}
+
+.partners__item:hover {
+  .partners__image--colored {
+    display: block;
+  }
+
+  .partners__image--uncolored {
+    display: none;
+  }
+}
+
+.partners__image--colored {
+  display: none;
+}

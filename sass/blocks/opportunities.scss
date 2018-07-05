@@ -1,0 +1,127 @@
+.opportunities {
+  padding-bottom: 70px;
+  background-image: linear-gradient(to bottom, $color-white 26%, $color-gray 26%);
+  background-color: $color-gray;
+}
+
+.opportunities__tabs {
+  display: flex;
+  justify-content: space-between;
+}
+
+.opportunities__buttons {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 284px;
+  padding-top: 80px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 7px;
+    height: 100%;
+    background-color: $color-black;
+  }
+}
+
+.opportunities__btn {
+  margin-bottom: 25px;
+  padding: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: default;
+}
+
+.opportunities__label:hover::before {
+  height: 40px;
+}
+
+.opportunities__btn:active {
+  color: $color-lightyellow;
+  background-color: $color-black;
+
+  .opportunities__label::before {
+    display: none;
+  }
+}
+
+.opportunities__label {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 160px;
+  margin: 0;
+  padding-left: 5px;
+  text-align: center;
+  letter-spacing: 2.8pt;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 0;
+    width: 160px;
+    height: 8px;
+    background-color: $color-darkyellow;
+    transform: translateY(-50%);
+  }
+}
+
+.opportunities__tab {
+  position: relative;
+  width: 760px;
+  padding-top: 63px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 86px;
+    right: 66px;
+    width: 136px;
+    height: 164px;
+    background-image: url("../img/delivery.png");
+    background-repeat: no-repeat;
+  }
+
+  &--guarantee::before {
+    width: 171px;
+    height: 194px;
+    background-image: url("../img/guarantee.png");
+  }
+
+  &--credit::before {
+    width: 156px;
+    height: 186px;
+    background-image: url("../img/credit.png");
+  }
+}
+
+.opportunities__heading {
+  margin: 0;
+  margin-bottom: 19px;
+  letter-spacing: 0.8pt;
+}
+
+.opportunities__paragraph {
+  margin: 0;
+  margin-bottom: 75px;
+  line-height: 2;
+}
+
+.opportunities__tab {
+  display: none;
+}
+
+#tab-1:checked ~ .opportunities__tabs #delivery,
+#tab-2:checked ~ .opportunities__tabs #guarantee,
+#tab-3:checked ~ .opportunities__tabs #credit {
+  display: block;
+}

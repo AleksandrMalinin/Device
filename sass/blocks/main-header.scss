@@ -1,0 +1,19 @@
+.main-header {
+  position: relative;
+  padding: 0 60px;
+  padding-top: 81px;
+  background-image: linear-gradient(to bottom, $color-white 22%, $color-yellow 22%);
+
+  &--catalog-page {
+    padding-bottom: 47px;
+    background-image: linear-gradient(to bottom, $color-white 17%, $color-yellow 17%);
+  }
+}
+
+.main-header__logo {
+  position: absolute;
+  top: 18px;
+  left: 57px;
+  letter-spacing: 0.5pt;
+  color: $color-black;
+}

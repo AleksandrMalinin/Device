@@ -1,0 +1,17 @@
+.logo {
+  margin: 0;
+  font-family: $font-gilroy;
+  font-weight: 800;
+  font-size: 48px;
+  line-height: 1;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}

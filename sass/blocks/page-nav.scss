@@ -1,0 +1,45 @@
+.page-nav {
+  margin-bottom: 39px;
+  padding-top: 38px;
+  padding-left: 60px;
+}
+
+.page-nav__heading {
+  margin: 0;
+  margin-bottom: 18px;
+  font-family: $font-gilroy;
+  font-weight: 800;
+  font-size: 47px;
+  line-height: 1;
+  color: $color-black;
+  letter-spacing: 0.5pt;
+}
+
+.page-nav__link {
+  position: relative;
+  margin-right: 32px;
+  font-size: 14px;
+  line-height: 36px;
+  color: transparentize($color-black, 0.7);
+
+  &:hover {
+    color: transparentize($color-black, 0.4);
+  }
+
+  &:active {
+    color: transparentize($color-black, 0.9);
+  }
+
+  &:first-child::before,
+  &:nth-child(2)::before {
+    content: "";
+    position: absolute;
+    top: 7px;
+    right: -19px;
+    width: 4px;
+    height: 9px;
+    background-image: url("../img/icons/nav-arrow.svg");
+    background-repeat: no-repeat;
+    cursor: default;
+  }
+}
